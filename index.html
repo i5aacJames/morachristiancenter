@@ -1,174 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mora Christian Center</title>
-    <style>
-        /* Base Styles */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mora Christian Center</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #6baed6, #4292c6);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 { margin: 0; font-size: 3em; }
+    header p { font-size: 1.2em; color: #e0eaf4; margin-top: 10px; }
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #6baed6, #4292c6);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #e0eaf4;
+      padding: 15px 0;
+      position: sticky;
+      top: 120px;
+      z-index: 999;
+    }
+    nav a {
+      margin: 0 20px;
+      font-weight: bold;
+      color: #2c3e50;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #1a5276; }
 
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #e0eaf4;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #e0eaf4;
-            padding: 15px 0;
-        }
-
-        nav a {
-            margin: 0 20px;
-            font-weight: bold;
-            color: #2c3e50;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #1a5276;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            margin-bottom: 60px;
-            background-color: #ffffff;
-            padding: 30px 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        section h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-
-        section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        section ul li {
-            padding: 8px 0;
-            font-size: 1.1em;
-        }
-
-        /* Donate Button */
-        .donate-btn {
-            display: inline-block;
-            background-color: #4292c6;
-            color: white;
-            padding: 12px 25px;
-            font-weight: bold;
-            border-radius: 6px;
-            transition: background-color 0.3s;
-            margin-top: 15px;
-        }
-
-        .donate-btn:hover {
-            background-color: #1a5276;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #e0eaf4;
-            color: #2c3e50;
-            text-align: center;
-            padding: 20px 10px;
-            font-size: 0.95em;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-            section {
-                padding: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>Mora Christian Center</h1>
-    <p>Growing in Faith, Serving with Love</p>
-</header>
-
-<nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="#donate">Donate</a>
-</nav>
-
-<main>
-    <section id="welcome">
-        <h2>Welcome</h2>
-        <p>Welcome to Mora Christian Center! We are a loving community of believers committed to worship, fellowship, and spiritual growth. Join us as we grow in faith and serve our community together.</p>
-    </section>
-
-    <section id="services">
-        <h2>Service Schedule</h2>
-        <ul>
-            <li><strong>Sunday Morning Bible Study:</strong> 9:30 AM</li>
-            <li><strong>Sunday Morning Worship:</strong> 10:30 AM</li>
-            <li><strong>Sunday Evening Service:</strong> 6:00 PM</li>
-            <li><strong>Wednesday Evening Service:</strong> 7:00 PM</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p><strong>Mailing Address:</strong> PO Box 753, Mora, New Mexico</p>
-        <p><strong>Cash App Donations:</strong> $JMtz2999</p>
-    </section>
-
-    <section id="donate">
-        <h2>Support Our Ministry</h2>
-        <p>Your generosity helps us continue spreading God’s word and serving the community. You can give securely through Cash App:</p>
-        <a href="https://cash.app/$JMtz2999" class="donate-btn">Give Now</a>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2025 Mora Christian Center. All Rights Reserved.</p>
-</footer>
-
-</body>
-</html>
- 
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section h2 { color: #2c3e50; font-size: 2em; margin-bottom: 20px; }
